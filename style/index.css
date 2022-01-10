@@ -1,0 +1,76 @@
+body {
+  background-color: #c5c5c58f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-image: url("https://th-thumbnailer.cdn-si-edu.com/LSkrjTVSI9TCaSHfuyT6FDaIAKg=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/8d/1c/8d1cc7cc-4e7a-48fd-ba01-c6a30f273e3a/gettyimages-153408104.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-content {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 350px;
+}
+
+.sub-content h3 {
+  color: #222222;
+  font-size: 20px;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.btn-relax {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-relax:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-play {
+  background-color: #e95454;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  color: #f5f5f5;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-play:hover {
+  background-color: #d34343;
+}
