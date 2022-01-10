@@ -2,7 +2,7 @@ let hours = 0;
 let minutes = 0;
 let seconds = 0;
 let interval = null;
-
+let timeInSeconds = 0;
 let isPlaying = false;
 
 document.getElementById("hours").addEventListener("change", (e) => {
@@ -18,12 +18,25 @@ document.getElementById("seconds").addEventListener("change", (e) => {
 });
 
 document.getElementById("startTimer").addEventListener("click", () => {
-  document.querySelector(".backgrounds").style.display = "none";
-  document.querySelector(".input-timer").style.display = "none";
-  shuffle();
-  isPlaying = true;
-
-  let timeInSeconds = hours * 60 * 60 + minutes * 60 + seconds;
+  timeInSeconds = hours * 60 * 60 + minutes * 60 + seconds;
+  if (timeInSeconds === 0) {
+    setTimeout(() => {
+      document.getElementById("alert-error").style.display = "block";
+      document.getElementById("alert-error").style.zIndex = "999";
+      document.querySelector(".input-timer").style.display = "none";
+    }, 300);
+    setTimeout(() => {
+      document.getElementById("alert-error").style.display = "none";
+      document.querySelector(".backgrounds").style.display = "flex";
+      document.querySelector(".input-timer").style.display = "flex";
+      isPlaying = false;
+    }, 1500);
+  } else {
+    document.querySelector(".backgrounds").style.display = "none";
+    document.querySelector(".input-timer").style.display = "none";
+    shuffle();
+    isPlaying = true;
+  }
 
   let displayTime = () => {
     let displayHours = Math.floor(timeInSeconds / (60 * 60));

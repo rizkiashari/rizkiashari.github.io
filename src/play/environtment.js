@@ -300,9 +300,6 @@ function onMouseUp(event) {
     }
     if (!cube.shuffling && isPlaying) {
       cube.rotateSclice(rotationAxis, rotationIndex, rotationDirection);
-      // setTimeout(() => {
-      //   if (cube.checkGameStatus()) cube.showCongrats();
-      // }, 500);
     }
   }
   dragStart = undefined;
@@ -385,9 +382,6 @@ function touchEnd(event) {
     }
     if (!cube.shuffling && isPlaying) {
       cube.rotateSclice(rotationAxis, rotationIndex, rotationDirection);
-      // setTimeout(() => {
-      //   if (cube.checkGameStatus()) cube.showCongrats();
-      // }, 500);
     }
   }
   dragStart = undefined;

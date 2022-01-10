@@ -68,8 +68,10 @@ select {
 .start-timer {
   background-color: rgb(0, 190, 0);
   color: white;
+  cursor: pointer;
   padding: 5px 10px 5px 10px;
   margin-top: 15px;
+  z-index: 999;
   border-radius: 5px;
   border-width: 0;
 }
@@ -81,4 +83,20 @@ select {
   border-radius: 5px;
   border-width: 0;
   text-decoration: none;
+}
+
+#alert-error {
+  background-color: #ffffff;
+  color: red;
+  display: none;
+  font-size: 12px;
+  margin-top: 10px;
+  position: absolute;
+  z-index: -1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
