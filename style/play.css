@@ -7,14 +7,16 @@ body {
 canvas {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .header {
   display: flex;
+  position: absolute;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  background-color: #555588;
+  justify-content: center;
+  background-color: transparent;
   color: #ffffff;
 }
 
