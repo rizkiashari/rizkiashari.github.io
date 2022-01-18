@@ -219,8 +219,6 @@ function touchStart(event) {
 
 function onMouseUp(event) {
   if (dragStart && dragEnd) {
-    document.getElementById("music_relax").play();
-
     const dx = dragEnd.x - dragStart.x;
     const dy = dragEnd.y - dragStart.y;
     const dz = dragEnd.z - dragStart.z;
@@ -249,6 +247,8 @@ function onMouseUp(event) {
           rotationIndex = currentCoordinates.x;
           rotationDirection = dir === "U" ? "anti" : "clockwise";
         }
+
+        document.getElementById("music_relax").play();
         break;
       case "yz":
         if (Math.abs(dy) > Math.abs(dz)) {
@@ -268,6 +268,8 @@ function onMouseUp(event) {
           rotationIndex = currentCoordinates.z;
           rotationDirection = dir === "D" ? "anti" : "clockwise";
         }
+
+        document.getElementById("music_relax").play();
         break;
       case "xz":
         if (Math.abs(dx) > Math.abs(dz)) {
@@ -287,6 +289,8 @@ function onMouseUp(event) {
           rotationIndex = currentCoordinates.x;
           rotationDirection = dir === "U" ? "anti" : "clockwise";
         }
+        document.getElementById("music_relax").play();
+
         break;
     }
     if (currentSign === -1) {
