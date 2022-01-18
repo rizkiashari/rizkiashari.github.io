@@ -12,17 +12,7 @@ let checker = {
 
 let isMobile = checker.any();
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // document.getElementById("btn").style.margin = "10px 3%";
-    // document.getElementById("btn").style.width = "94%";
-    // document.getElementById("btn").style.height = "10vh";
-    // document.getElementById("btn").style.opacity = "0.4";
-    // document.getElementById("btn").style.fontSize = "50px";
-  },
-  false
-);
+document.addEventListener("DOMContentLoaded", () => {}, false);
 
 function onResize() {
   camera.aspect = window.innerWidth / window.innerHeight;

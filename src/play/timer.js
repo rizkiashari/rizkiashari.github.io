@@ -19,6 +19,8 @@ document.getElementById("seconds").addEventListener("change", (e) => {
 
 document.getElementById("startTimer").addEventListener("click", () => {
   timeInSeconds = hours * 60 * 60 + minutes * 60 + seconds;
+  document.getElementById("music_play").autoplay;
+  document.getElementById("music_play").play();
   if (timeInSeconds === 0) {
     setTimeout(() => {
       document.getElementById("alert-error").style.display = "block";
@@ -64,6 +66,8 @@ document.getElementById("startTimer").addEventListener("click", () => {
         document.getElementById("status").innerHTML = "Game Over";
         document.getElementById("timer").style.color = "white";
         document.getElementById("timer").innerHTML = "00 : 00 : 00";
+        document.getElementById("music_play").muted = true;
+        document.getElementById("music_play").autoplay = false;
       }, 5000);
     } else if (cube.checkGameStatus()) {
       clearInterval(interval);
@@ -75,6 +79,8 @@ document.getElementById("startTimer").addEventListener("click", () => {
         document.getElementById("timer").style.color = "white";
         document.getElementById("hasil").innerHTML = timeInSeconds;
         document.getElementById("timer").innerHTML = "00 : 00 : 00";
+        document.getElementById("music_play").muted = true;
+        document.getElementById("music_play").autoplay = false;
       }, 1000);
     }
   }, 1000);
