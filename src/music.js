@@ -1,3 +1,7 @@
+window.onload = function () {
+  document.getElementById("music_relax").play();
+};
+
 const audioCube = document.getElementById("music_relax");
 
 document.onkeydown = function (e) {
