@@ -219,6 +219,8 @@ function touchStart(event) {
 
 function onMouseUp(event) {
   if (dragStart && dragEnd) {
+    document.getElementById("music_relax").play();
+
     const dx = dragEnd.x - dragStart.x;
     const dy = dragEnd.y - dragStart.y;
     const dz = dragEnd.z - dragStart.z;
@@ -294,7 +296,7 @@ function onMouseUp(event) {
     if (!cube.shuffling) {
       cube.rotateSclice(rotationAxis, rotationIndex, rotationDirection);
       setTimeout(() => {
-        if (cube.checkGameStatus()) cube.showCongrats();
+        // if (cube.checkGameStatus()) cube.showCongrats();
       }, 500);
     }
   }
@@ -379,7 +381,7 @@ function touchEnd(event) {
     if (!cube.shuffling) {
       cube.rotateSclice(rotationAxis, rotationIndex, rotationDirection);
       setTimeout(() => {
-        if (cube.checkGameStatus()) cube.showCongrats();
+        // if (cube.checkGameStatus()) cube.showCongrats();
       }, 500);
     }
   }
