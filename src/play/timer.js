@@ -85,3 +85,33 @@ document.getElementById("startTimer").addEventListener("click", () => {
     }
   }, 1000);
 });
+
+const audioPlay = document.getElementById("music_play");
+
+document.onkeydown = function (e) {
+  switch (e.keyCode) {
+    case 38:
+      e.preventDefault();
+      audioVol = audioPlay.volume;
+      console.log(audioVol);
+      if (audioVol != 1) {
+        try {
+          audioPlay.volume = audioVol + 0.2;
+        } catch (error) {
+          audioPlay.volume = 1;
+        }
+      }
+      break;
+    case 40:
+      e.preventDefault();
+      audioVol = audioPlay.volume;
+      if (audioVol != 0) {
+        try {
+          audioPlay.volume = audioVol - 0.2;
+        } catch (error) {
+          audioPlay.volume = 0;
+        }
+      }
+      break;
+  }
+};
